@@ -1,14 +1,13 @@
 import { useState } from "react";
 
 const productImages = [
-  "/images/iphone1.png",
-  "/images/iphone2.webp",
-  "/images/iphone3.webp",
-  "/images/iphone4.webp",
+  require("../components/images/iphone1.png"),
+  require("../components/images/iphone2.webp"),
+  require("../components/images/iphone3.webp"),
+  require("../components/images/iphone4.webp"),
 ];
 const ImageSlider = () => {
   const [selectedImage, setSelectedImage] = useState(0);
-
   const handleNextImage = () => {
     setSelectedImage((prevImage) => (prevImage + 1) % productImages.length);
   };
