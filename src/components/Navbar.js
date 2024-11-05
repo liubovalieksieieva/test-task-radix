@@ -7,29 +7,31 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <nav className="navbar">
-      <div className="nav-logo">L&S</div>
-      <div className="burger-icon" onClick={toggleMenu}>
-        <span className={`line ${isOpen ? "open" : ""}`}></span>
-        <span className={`line ${isOpen ? "open" : ""}`}></span>
-        <span className={`line ${isOpen ? "open" : ""}`}></span>
-      </div>
+    <div className="container">
+      <nav className="navbar">
+        <div className="nav-logo">L&S</div>
+        <div className="burger-icon" onClick={toggleMenu}>
+          <span className={`line ${isOpen ? "open" : ""}`}></span>
+          <span className={`line ${isOpen ? "open" : ""}`}></span>
+          <span className={`line ${isOpen ? "open" : ""}`}></span>
+        </div>
 
-      <ul className={`nav-links ${isOpen ? "active" : ""}`}>
-        <li>
-          <a href="#home">Home</a>
-        </li>
-        <li>
-          <a href="#shop">Store</a>
-        </li>
-        <li>
-          <a href="#about">About us</a>
-        </li>
-        <li>
-          <a href="#contact">Contacts</a>
-        </li>
-      </ul>
-    </nav>
+        <ul className={`nav-links ${isOpen ? "active" : ""}`}>
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#shop">Store</a>
+          </li>
+          <li>
+            <a href="#about">About us</a>
+          </li>
+          <li>
+            <a href="#contact">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   );
 };
 export default Navbar;
